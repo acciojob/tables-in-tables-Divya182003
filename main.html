@@ -1,14 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <table style="width: 100%; height: 100%">
-      <!-- Your code here -->
-    </table>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Tables in Tables</title>
+  <style>
+    .black-cell {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table {
+      margin: 10px;
+    }
+    th, td {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tables in Tables</h1>
+
+  <table>
+    <tr>
+      <!-- Nested Table 1 -->
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th>Nested Table 1</th>
+              <th>Column 1</th>
+              <th>Column 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1</td>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <!-- Nested Table 2 -->
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th>Nested Table 2</th>
+              <th>Column 1</th>
+              <th>Column 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row A</td>
+              <td>Data A1</td>
+              <td>Data A2</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <!-- Nested Table 3 with List -->
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th>Nested Table 3</th>
+              <th>Column 1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>List</td>
+              <td>
+                <ul>
+                  <li>List item 1</li>
+                  <li>List item 2</li>
+                  <li>List item 3</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <!-- Nested Table 4 with "HTML" cell -->
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th>Nested Table 4</th>
+              <th>Column A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="black-cell" colspan="2">HTML</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
 </html>
